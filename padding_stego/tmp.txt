@@ -1,0 +1,6 @@
+client:
+python3 create_message.py -m "Hello" -o secret.txt
+server:
+sudo python3 receive_message.py -l 172.20.0.10 -p 80 -s 12345 -o decoded_message.txt
+client:
+sudo python3 send_message.py -i secret.txt -d 172.20.0.10 -p 80 -s 12345
